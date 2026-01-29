@@ -12,6 +12,8 @@ Growing up, one of my favorite video games was the Pokémon Mystery Dungeon seri
 
 I wanted to give players a way to not only play any number of maps they desired in a mystery dungeon environment, but also to allow them to request whatever they wished to be in the dungeon. Through the power of LLMs, players can now receive randomized maps that contain all the elements they desire in a seamless text-to-map flow.
 
+![Full Flowchart]({{ '/blog_images/text_to_map_flowchart.png' | relative_url }})
+
 Another major motivator for this work is to create a sandbox environment for developers to easily create a highly customizable map dataset for fine-tuning, as well as an equally customizable web game to test their creations. The end result: dungeons that can be played by everyone. [Check out the repo here!](https://github.com/vishnus99/mysterydungeonGPT)
 
 ![Web Game]({{ '/blog_images/game_screenshot.png' | relative_url }})
@@ -37,6 +39,8 @@ The training was run on **Modal**, which provided access to GPUs powerful enough
 The first iterations of training and testing revealed a significant issue: a 70/30 class imbalance between wall and floor tiles. This wasn't something I had originally considered, and it resulted in the model outputting nothing but wall tiles. There was also a massive number of tokens being outputted to represent the full grid.
 
 After trying solutions such as reducing the overall grid size and increasing the number of rooms in the training data, the solution that ultimately worked was transitioning to a **coordinate-based approach**. In this method, only the walkable tiles are stored, which results in approximately 90% fewer tokens and eliminates class imbalance, since the model is solely predicting walkable tiles.
+
+![JSON comparison]({{ '/blog_images/format_comparison_json.png' | relative_url }})
 
 Additionally, because the grid dimensions are passed in as metadata, grid reconstruction isn't affected—the location of walls is implicitly determined by the absence of walkable tiles. Finally, the smaller token sequences resulted in lower memory usage, allowing the use of a 2048 max context length instead of 6144+.
 
