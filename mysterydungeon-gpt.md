@@ -51,7 +51,7 @@ The key to the inference piece was adding the Qwen3-provided non-thinking Jinja 
 
 For this project and due to limited GPU access, I limited the dataset to include only medium-difficulty dungeons containing 6 to 12 rooms, with a total dataset size of 5,000 maps for training and validation. Despite the limited dataset, the model performs very well in predicting valid, playable maps from the given prompts.
 
-The training prompts used are shared below, along with some example maps that were generated.
+The training prompts used are shared below, along with some example maps that were generated. The green and red areas on the map represent the player and stair(exit) spawns respectively, and the brown tiles represent the walkable area. 
 
 ![Sample Maps]({{ '/blog_images/example_maps.png' | relative_url }})
 ![Sample Prompts]({{ '/blog_images/example_prompts.png' | relative_url }})
