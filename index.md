@@ -9,15 +9,12 @@ title: Home
   <p class="home-intro">I write about ML, game dev, and side projects.</p>
 </div>
 
-{% assign latest = site.posts | first %}
-{% if latest %}
 <section class="home-latest">
-  <h2>Latest post</h2>
+  <h2>Blog</h2>
   <article class="featured-post">
-    <h3><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h3>
-    <p class="featured-post-meta">{{ latest.date | date: "%B %d, %Y" }}</p>
-    <a href="{{ latest.url | relative_url }}" class="btn btn-primary">Read post</a>
+    <h3><a href="{{ '/mysterydungeonGPT/' | relative_url }}">mysterydungeonGPT – An exploration in LLM text-to-map game level generation</a></h3>
+    <p class="featured-post-meta">January 28, 2026</p>
+    <a href="{{ '/mysterydungeonGPT/' | relative_url }}" class="btn btn-primary">Read post</a>
   </article>
-  <p><a href="{{ "/blog/" | relative_url }}">View all posts →</a></p>
+  <p><a href="{{ '/blog/' | relative_url }}">View all posts →</a></p>
 </section>
-{% endif %}
