@@ -56,7 +56,7 @@ The key to the inference piece was adding the Qwen3-provided non-thinking Jinja 
 
 For this project and due to limited GPU access, I limited the dataset to include only medium-difficulty dungeons containing 6 to 12 rooms, with a total dataset size of 5,000 maps for training and validation. Despite the limited dataset, the model performs very well in predicting valid, playable maps from the given prompts.
 
-The training prompts used are shared below, along with some example maps that were generated. The green and red areas on the map represent the player and stair(exit) spawns respectively, and the brown tiles represent the walkable area. 
+The training prompts used are shared below, along with some example maps that were generated. The green and red areas on the map represent the player and stair(exit) spawns respectively, and the brown tiles represent the walkable area. To convert the JSON into a playable map, the base grid is initialized with the given height and width. This base grid is essentially nothing but walls, which are denoted with 0s. Then, for each coordinate in the JSON, the corresponding tile in the grid is turned into a 1, or a walkable floor tile. Player and stair spawn points are layered on top of this grid with their respective coordinates, and enemy information (spawn points and difficulty) is also parsed from the JSON and added to the grid.
 
 ![Sample Maps]({{ '/blog_images/example_maps.png' | relative_url }})
 ![Sample Prompts]({{ '/blog_images/example_prompts.png' | relative_url }})
