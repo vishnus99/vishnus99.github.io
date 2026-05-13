@@ -11,6 +11,10 @@ future: true
 author:
   name: Vishnu Menon
 
+social:
+  github: https://github.com/vishnus99
+  linkedin: https://www.linkedin.com/in/vishnu-menon-590245128
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
