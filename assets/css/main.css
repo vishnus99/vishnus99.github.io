@@ -241,6 +241,27 @@ img { max-width: 100%; height: auto; display: block; }
 
 .post-content strong { font-weight: 600; }
 
+.post-content .highlighter-rouge {
+  margin: 0 0 1rem;
+  background: #f6f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.post-content .highlighter-rouge pre {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  overflow: auto;
+}
+
+.post-content .highlighter-rouge code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
 /* ===== Footer ===== */
 .site-footer {
   border-top: 1px solid #e5e7eb;
