@@ -12,9 +12,9 @@ title: Home
 <section class="home-latest">
   <h2>Blog</h2>
   <article class="featured-post">
-    <h3><a href="{{ '/mysterydungeon-gpt/' | relative_url }}">mysterydungeonGPT – An exploration in LLM text-to-map game level generation</a></h3>
-    <p class="featured-post-meta">January 28, 2026</p>
-    <a href="{{ '/mysterydungeon-gpt/' | relative_url }}" class="btn btn-primary">Read post</a>
+    <h3><a href="{{ '/goodlooks/' | relative_url }}">GoodLooks – An AI-powered CLI for local to-do management</a></h3>
+    <p class="featured-post-meta">May 13, 2026</p>
+    <a href="{{ '/goodlooks/' | relative_url }}" class="btn btn-primary">Read post</a>
   </article>
   <p><a href="{{ '/blog/' | relative_url }}">View all posts →</a></p>
 </section>
